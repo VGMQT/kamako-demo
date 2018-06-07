@@ -17,9 +17,6 @@ $(document).ready(function () {
                 el: '.swiper-pagination',
                 type: 'bullets',
                 clickable: true
-            },
-            autoplay: {
-                delay: 7500,
             }
         })
     }());
