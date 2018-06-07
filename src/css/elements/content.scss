@@ -82,9 +82,9 @@
 .btn{
   display: inline-block;
   width: 40%;
+  border: 2px solid $accentcolor2;
   border-radius: 5px;
   background: $accentcolor2;
-  border: 2px solid $accentcolor2;
   transition: all .3s;
   &:hover{
     background: #ffffff;
@@ -97,6 +97,9 @@
   }
   @include tablet{
     width: 60%;
+  }
+  @include mobile{
+    width: 70%;
   }
 }
 

@@ -4,8 +4,8 @@
   justify-content: space-around;
   align-items: center;
   min-height: rem(75px);
-  background: #ffffff;
   box-shadow: 0px 10px 17px 3px rgba(0, 0, 0, 0.03);
+  background: #ffffff;
   @include laptop{
     padding-top: rem(15px);
   }
@@ -227,11 +227,11 @@
   width: rem(150px);
   height: rem(32px);
   padding: rem(5px) rem(37px) rem(5px) rem(10px);
+  outline: none;
+  font-size: rem(13px);
   border: 1px solid #8c8c8c;
   border-radius: 25px;
-  outline: none;
   color: $main;
-  font-size: rem(13px);
   &::placeholder{
     color: #8c8c8c;
   }

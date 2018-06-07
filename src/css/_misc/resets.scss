@@ -61,14 +61,14 @@
 }
 
 .swiper-pagination-bullet {
+  display: inline-block;
   width: rem(12px);
   height: rem(12px);
-  display: inline-block;
   border: 2px solid #ffffff;
   border-radius: 100%;
+  box-shadow: 0px 0px 18.2px 1.8px rgba(0, 0, 0, 0.004);
   background: none;
   opacity: 1;
-  box-shadow: 0px 0px 18.2px 1.8px rgba(0, 0, 0, 0.004);
   transition: all .3s;
   &:hover{
     background: #ffffff;
