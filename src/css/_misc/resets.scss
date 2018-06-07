@@ -9,8 +9,8 @@
   top: 25%;
   left: rem(50px);
   z-index: 10;
-  width: 100px;
-  height: 100px;
+  width: rem(100px);
+  height: rem(100px);
   cursor: pointer;
   svg{
     position: absolute;
@@ -37,8 +37,8 @@
   top: 25%;
   right: rem(50px);
   z-index: 10;
-  width: 100px;
-  height: 100px;
+  width: rem(100px);
+  height: rem(100px);
   cursor: pointer;
   svg{
     position: absolute;
