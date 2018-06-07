@@ -20,7 +20,7 @@
 }
 
 .menu{
-  padding-left: rem(130px);
+  margin-left: rem(180px);
 }
 
 .menu__list{
@@ -101,6 +101,8 @@
 
 .search__link{
   display: block;
+  width: rem(150px);
+  text-align: center;
   border-bottom: 2px solid transparent;
   &:hover{
     .search__svg{
@@ -110,8 +112,50 @@
 }
 
 .search__svg{
+  display: inline-block;
   width: rem(25px);
   height: rem(25px);
   fill: $main;
   transition: all .3s;
+}
+
+//----------------------<<search input>>----------------------\\
+.form-search{
+  position: relative;
+  display: none;
+  border-bottom: 2px solid transparent;
+}
+
+.search__input{
+  @include font(sbold);
+  width: rem(150px);
+  height: rem(32px);
+  padding: rem(5px) rem(37px) rem(5px) rem(10px);
+  border: 1px solid #8c8c8c;
+  border-radius: 25px;
+  outline: none;
+  color: $main;
+  font-size: rem(13px);
+  &::placeholder{
+    color: #8c8c8c;
+  }
+}
+
+.search__submit{
+  position: absolute;
+  right: rem(10px);
+  top: rem(3px);
+  width: rem(25px);
+  height: rem(25px);
+  border: none;
+  outline: none;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiICAgdmVyc2lvbj0iMS4xIiAgIGlkPSJDYXBhXzEiICAgeD0iMHB4IiAgIHk9IjBweCIgICB2aWV3Qm94PSIwIDAgNDUxIDQ1MSIgICBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NTEgNDUxOyIgICB4bWw6c3BhY2U9InByZXNlcnZlIiAgIHNvZGlwb2RpOmRvY25hbWU9InNlYXJjaDIuc3ZnIiAgIGlua3NjYXBlOnZlcnNpb249IjAuOTIuMiAoNWMzZTgwZCwgMjAxNy0wOC0wNikiPjxtZXRhZGF0YSAgICAgaWQ9Im1ldGFkYXRhNDEiPjxyZGY6UkRGPjxjYzpXb3JrICAgICAgICAgcmRmOmFib3V0PSIiPjxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PjxkYzp0eXBlICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPjxkYzp0aXRsZT48L2RjOnRpdGxlPjwvY2M6V29yaz48L3JkZjpSREY+PC9tZXRhZGF0YT48ZGVmcyAgICAgaWQ9ImRlZnMzOSIgLz48c29kaXBvZGk6bmFtZWR2aWV3ICAgICBwYWdlY29sb3I9IiNmZmZmZmYiICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIgICAgIGJvcmRlcm9wYWNpdHk9IjEiICAgICBvYmplY3R0b2xlcmFuY2U9IjEwIiAgICAgZ3JpZHRvbGVyYW5jZT0iMTAiICAgICBndWlkZXRvbGVyYW5jZT0iMTAiICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMCIgICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9Ijc1MSIgICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjQ4MCIgICAgIGlkPSJuYW1lZHZpZXczNyIgICAgIHNob3dncmlkPSJmYWxzZSIgICAgIGlua3NjYXBlOnpvb209IjAuNTIzMjgxNiIgICAgIGlua3NjYXBlOmN4PSI1NjkuNDgzMDUiICAgICBpbmtzY2FwZTpjeT0iMjI1LjUiICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMzI0IiAgICAgaW5rc2NhcGU6d2luZG93LXk9Ijg1IiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMCIgICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9IkNhcGFfMSIgLz48ZyAgICAgaWQ9Imc0IiAgICAgc3R5bGU9ImZpbGw6IzE0MTQxNDtmaWxsLW9wYWNpdHk6MC42MDAwMDAwMiI+PHBhdGggICAgICAgZD0iTTQ0Ny4wNSw0MjhsLTEwOS42LTEwOS42YzI5LjQtMzMuOCw0Ny4yLTc3LjksNDcuMi0xMjYuMUMzODQuNjUsODYuMiwyOTguMzUsMCwxOTIuMzUsMEM4Ni4yNSwwLDAuMDUsODYuMywwLjA1LDE5Mi4zICAgczg2LjMsMTkyLjMsMTkyLjMsMTkyLjNjNDguMiwwLDkyLjMtMTcuOCwxMjYuMS00Ny4yTDQyOC4wNSw0NDdjMi42LDIuNiw2LjEsNCw5LjUsNHM2LjktMS4zLDkuNS00ICAgQzQ1Mi4yNSw0NDEuOCw0NTIuMjUsNDMzLjIsNDQ3LjA1LDQyOHogTTI2Ljk1LDE5Mi4zYzAtOTEuMiw3NC4yLTE2NS4zLDE2NS4zLTE2NS4zYzkxLjIsMCwxNjUuMyw3NC4yLDE2NS4zLDE2NS4zICAgcy03NC4xLDE2NS40LTE2NS4zLDE2NS40QzEwMS4xNSwzNTcuNywyNi45NSwyODMuNSwyNi45NSwxOTIuM3oiICAgICAgIGlkPSJwYXRoMiIgICAgICAgc3R5bGU9ImZpbGw6IzE0MTQxNDtmaWxsLW9wYWNpdHk6MC42MDAwMDAwMiIgLz48L2c+PGcgICAgIGlkPSJnNiIgLz48ZyAgICAgaWQ9Imc4IiAvPjxnICAgICBpZD0iZzEwIiAvPjxnICAgICBpZD0iZzEyIiAvPjxnICAgICBpZD0iZzE0IiAvPjxnICAgICBpZD0iZzE2IiAvPjxnICAgICBpZD0iZzE4IiAvPjxnICAgICBpZD0iZzIwIiAvPjxnICAgICBpZD0iZzIyIiAvPjxnICAgICBpZD0iZzI0IiAvPjxnICAgICBpZD0iZzI2IiAvPjxnICAgICBpZD0iZzI4IiAvPjxnICAgICBpZD0iZzMwIiAvPjxnICAgICBpZD0iZzMyIiAvPjxnICAgICBpZD0iZzM0IiAvPjwvc3ZnPg==) center no-repeat;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover{
+    transform: scale(.90);
+  }
+  &:active{
+    transform: scale(.80);
+  }
 }

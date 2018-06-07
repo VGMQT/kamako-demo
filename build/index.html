@@ -5,12 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=1000">
     <title>Kamako Demo</title>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400i&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
 <div class="wrapper">
+    <div class="dropdown">
+        <div class="dropdown__inner">
+            <div class="dropdown__text">КАМАКО - ведущий производитель майонезов, соусов и кетчупов в Беларуси на протяжении 20 лет</div>
+            <div class="dropdown__close">
+                <svg class="dropdown__svg">
+                    <use xlink:href="assets/img/svg/sprite/sprite.svg#close"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <div class="logo">
             <img src="assets/img/logo.png" alt="Logo">
@@ -35,6 +44,10 @@
                     <use xlink:href="assets/img/svg/sprite/sprite.svg#search"></use>
                 </svg>
             </a>
+            <form action="#" method="get" class="form-search">
+                <input type="text" placeholder="Поиск..." class="search__input">
+                <input type="submit" value="" class="search__submit">
+            </form>
         </div>
     </header>
     <main class="content">
