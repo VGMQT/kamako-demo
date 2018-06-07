@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=1000">
+    <title>Kamako Demo</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400i&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="Logo">
+        </div>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item active"><a class="menu__link" href="#">О компании</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Продукция</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Благотворительность</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Пресс-центр</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Кулинарный клуб</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="lang">
+            <a href="#" class="lang__link active">РУС</a>
+            <a href="#" class="lang__link">ENG</a>
+        </div>
+        <div class="search">
+            <a href="#" class="search__link">
+                <svg class="search__svg">
+                    <use xlink:href="assets/img/svg/sprite/sprite.svg#search"></use>
+                </svg>
+            </a>
+        </div>
+    </header>
+    <main class="content">
+        <div class="intro">Пусть всегда будет вкусно!</div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide__block">
+                        <div class="suptitle">Кулинарный клуб</div>
+                        <div class="title">Создай свой кулинарный шедевр вместе с соусами Камако</div>
+                        <div class="btn">
+                            <a href="#" class="btn__link">Узнать больше</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide__block">
+                        <div class="suptitle">Кулинарный клуб</div>
+                        <div class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, totam.</div>
+                        <div class="btn">
+                            <a href="#" class="btn__link">Узнать больше</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide__block">
+                        <div class="suptitle">Кулинарный клуб</div>
+                        <div class="title">Lorem ipsum dolor sit amet.</div>
+                        <div class="btn">
+                            <a href="#" class="btn__link">Узнать больше</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-pr">
+                <svg>
+                    <use xlink:href="assets/img/svg/sprite/sprite.svg#prev"></use>
+                </svg>
+            </div>
+            <div class="swiper-button-nx">
+                <svg>
+                    <use xlink:href="assets/img/svg/sprite/sprite.svg#next"></use>
+                </svg>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="js/vendor.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+</html>
