@@ -27,6 +27,9 @@
       fill: $accentcolor2;
     }
   }
+  @include mobile{
+    top: 70%;
+  }
 }
 
 .swiper-button-nx{
@@ -51,6 +54,9 @@
     svg{
       fill: $accentcolor2;
     }
+  }
+  @include mobile{
+    top: 70%;
   }
 }
 

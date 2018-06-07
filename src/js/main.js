@@ -60,4 +60,31 @@ $(document).ready(function () {
 
     }());
 
+    //----------------------<<menu>>----------------------\\
+    (function () {
+        var flag = true;
+
+        $('.menu__btn').on('click', function (e) {
+            e.preventDefault();
+
+            var $this = $(this);
+            var menu = $('.menu__list');
+
+            if (flag) {
+                flag = false;
+                if (!$this.hasClass('active')) {
+                    $this.addClass('active');
+                    menu.slideDown(500, function () {
+                        flag = true;
+                    });
+                } else {
+                    $this.removeClass('active');
+                    menu.slideUp(500, function () {
+                        flag = true;
+                    });
+                }
+            }
+        })
+    }());
+
 });

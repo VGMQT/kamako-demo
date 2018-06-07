@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: rem(15px) 0;
+  padding: rem(15px);
   text-align: center;
   background-color: $accentcolor;
 }
@@ -26,6 +26,10 @@
     .dropdown__svg{
       transform: rotate(180deg);
     }
+  }
+  @include mobile{
+    width: 25px;
+    height: 25px;
   }
 }
 

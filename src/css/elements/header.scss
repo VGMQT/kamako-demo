@@ -6,6 +6,13 @@
   min-height: rem(75px);
   background: #ffffff;
   box-shadow: 0px 10px 17px 3px rgba(0, 0, 0, 0.03);
+  @include laptop{
+    padding-top: rem(15px);
+  }
+  @include mobile{
+    flex-direction: column;
+    padding-right: 20px;
+  }
 }
 
 .logo{
@@ -17,10 +24,45 @@
   img{
     @extend %img;
   }
+  @include tablet{
+    left: rem(30px);
+  }
 }
 
 .menu{
   margin-left: rem(180px);
+  @include laptop{
+    margin-left: rem(150px);
+  }
+  @include tablet{
+    margin-left: rem(130px);
+  }
+  @include mobile{
+    display: flex;
+    flex-direction: column;
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    text-align: right;
+    .active{
+      color: $accentcolor;
+    }
+  }
+}
+
+.menu__btn{
+  @include font(exbold);
+  display: none;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: $main;
+  transition: all .3s;
+  &:hover{
+    color: $accentcolor;
+  }
+  @include mobile{
+    display: block;
+  }
 }
 
 .menu__list{
@@ -39,6 +81,19 @@
       color: $accentcolor;
     }
   }
+  @include laptop{
+    flex-wrap: wrap;
+    justify-content: center;
+    width: rem(600px);
+  }
+  @include tablet{
+    width: rem(440px);
+  }
+  @include mobile{
+    flex-direction: column;
+    display: none;
+    width: 100%;
+  }
 }
 
 .menu__item{
@@ -56,6 +111,12 @@
       color: $accentcolor;
     }
   }
+  @include laptop{
+    margin-bottom: rem(10px);
+  }
+  @include mobile{
+    margin-right: 0;
+  }
 }
 
 .menu__link{
@@ -67,16 +128,20 @@
 .lang{
   display: flex;
   .active{
-    @include font();
     color: $accentcolor;
     &:hover{
       color: rgba($accentcolor, .5);
     }
   }
+  @include mobile{
+    justify-content: flex-end;
+    order: 1;
+    width: 100%;
+  }
 }
 
 .lang__link{
-  @include font(sbold);
+  @include font();
   position: relative;
   display: block;
   text-transform: uppercase;
@@ -92,10 +157,26 @@
       bottom: rem(2px);
       color: #8c8c8c;
       content: '|';
+      @include mobile{
+        bottom: rem(1px);
+      }
     }
   }
   &:hover{
     color: $accentcolor;
+  }
+  @include laptop{
+    margin-bottom: rem(10px);
+  }
+}
+
+.search{
+  @include mobile{
+    order: 2;
+    width: 100%;
+    padding-left: 100px;
+    margin: 0;
+    text-align: right;
   }
 }
 
@@ -108,6 +189,15 @@
     .search__svg{
       fill: $accentcolor;
     }
+  }
+  @include laptop{
+    margin-bottom: rem(10px);
+  }
+  @include mobile{
+    display: inline-block;
+    width: 30px;
+    height: 26px;
+    margin-bottom: 0;
   }
 }
 
@@ -124,6 +214,12 @@
   position: relative;
   display: none;
   border-bottom: 2px solid transparent;
+  @include laptop{
+    margin-bottom: rem(10px);
+  }
+  @include mobile{
+    margin-bottom: 0;
+  }
 }
 
 .search__input{
@@ -138,6 +234,9 @@
   font-size: rem(13px);
   &::placeholder{
     color: #8c8c8c;
+  }
+  @include mobile{
+    width: 100%;
   }
 }
 
